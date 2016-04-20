@@ -19,3 +19,43 @@ while true do
     sleep(2)
   end
 end
+
+Light Switch Code:
+local side = "right"
+local userinput = ""
+local event = ""
+ 
+redstone.setOutput(side, false)
+ 
+while true do
+ 
+term.clear()
+term.setCursorPos(1, 1)
+print("To turn lamp on, press L.")
+print("To exit, press any other key.")
+ 
+event, userinput = os.pullEvent("char")
+userinput = string.upper(userinput)
+ 
+if userinput == "L" then
+redstone.setOutput(side, true)
+else
+term.clear()
+break
+end
+ 
+term.clear()
+term.setCursorPos(1, 1)
+print("To turn lamp off, press L.")
+print("To exit, press any other key.")
+ 
+event, userinput = os.pullEvent("char")
+userinput = string.upper(userinput)
+ 
+if userinput == "L" then
+redstone.setOutput(side, false)
+else
+term.clear()
+break
+end
+end
