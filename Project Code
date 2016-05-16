@@ -59,3 +59,19 @@ term.clear()
 break
 end
 end
+
+Defense Code:
+term.setCursorPos(1,1)
+term.clear()
+print("Press O to turn on the program")
+print("Hold Cont.+T to turn off the program")
+event, userinput = os.pullEvent("char")
+userinput = string.upper(userinput)
+if userinput == "O" then
+for i=1,64 do 
+  rs.setOutput("back",true)
+  sleep(0.7)
+  rs.setOutput("back", false)
+  sleep(0.7)
+end
+end
