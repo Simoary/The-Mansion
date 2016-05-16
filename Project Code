@@ -75,3 +75,64 @@ for i=1,64 do
   sleep(0.7)
 end
 end
+
+Perimeter Code:
+x = 12
+y = 29
+a = 15
+b = 15
+c = 29
+z = 5
+m = 10
+
+for n = 1, x do
+turtle.digUp()
+turtle.up()
+end
+
+
+turtle.turnRight()
+turtle.forward()
+turtle.forward()
+
+    for n = 1, z do 
+
+      turtle.turnRight()
+
+      for n = 1, y do
+      turtle.forward()
+      end
+
+      turtle.turnRight()
+
+      for n = 1, a do
+      turtle.forward()
+      end
+
+      turtle.turnRight()
+    
+      for n = 1, c do
+      turtle.forward()
+      end
+
+      turtle.turnRight()
+
+      for n = 1, b do
+      turtle.forward()
+      end
+
+
+  end
+ 
+ turtle.turnRight()
+ turtle.turnRight()
+ turtle.forward()
+ turtle.forward()
+ turtle.turnRight()
+ turtle.down()
+ turtle.down()
+ turtle.placeUp()
+ 
+ for n = 1, m do
+   turtle.down()
+ end
