@@ -1,0 +1,138 @@
+House: local X, Y
+X = 14
+Y = 8
+for Z = 1, 2 do
+  for X = 1, X do
+    turtle.digDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  for Y = 1, Y do
+    turtle.digDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+end
+for Z = 1, 2 do
+  for X = 1, X do
+    turtle.select( 1 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  for Y = 1, Y do
+    turtle.select( 1 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+end
+
+Housept2:
+House()
+turtle.forward()
+turtle.turnLeft()
+turtle.forward()
+turtle.turnRight()
+for Z = 1, 2 do
+  for X = 1, 11 do
+    turtle.digDown()
+    turtle.select( 2 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  for Y = 1, 6 do
+    turtle.digDown()
+    turtle.select( 2 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+end
+turtle.forward()
+turtle.turnLeft()
+turtle.forward()
+turtle.turnRight()
+for C = 1, 2 do
+  for A = 1, 9 do
+    turtle.digDown()
+    turtle.select( 3 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  for B = 1, 4 do
+    turtle.digDown()
+    turtle.select( 3 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+end
+
+Housept3:
+Housept2()
+turtle.forward()
+turtle.turnLeft()
+turtle.forward()
+turtle.turnRight()
+for X = 1, 2 do
+  for A = 1, 7 do
+    turtle.digDown()
+    turtle.select( 3 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  for B = 1, 2 do
+    turtle.digDown()
+    turtle.select( 4 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+end
+turtle.forward()
+turtle.turnLeft()
+turtle.forward()
+turtle.turnRight()
+for Z = 1, 6 do
+  turtle.digDown()
+  turtle.select( 4 )
+  turtle.placeDown()
+  turtle.forward()
+end
+for n = 1, 3 do
+  turtle.forward()
+end
+turtle.turnLeft()
+for n = 1, 4 do
+  turtle.forward()
+end
+
+Housept4:
+local I
+Housept3()
+turtle.turnLeft()
+turtle.up()
+I = 5
+for Height = 1, 2 do
+  for Z = 1, 2 do
+    for X = 1, 13 do
+      turtle.select( I )
+      turtle.placeDown()
+      turtle.forward()
+    end
+    turtle.turnLeft()
+    for Y = 1, 8 do
+      turtle.select( 6 )
+      turtle.placeDown()
+      turtle.forward()
+    end
+    turtle.turnLeft()
+  end
+  turtle.up()
+end
+
+Housept5:
