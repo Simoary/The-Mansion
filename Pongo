@@ -24,11 +24,11 @@ function drawPads()
         write(" ")
         if pad1 == 4 then
                 term.setCursorPos(1,pad1-2)
-                write("-")
+                write("=")
         end
         if pad1 == 15 then
                 term.setCursorPos(1,pad1+2)
-                write("-")
+                write("=")
         end
        
         term.setCursorPos(width-1,pad2-1)
@@ -43,11 +43,11 @@ function drawPads()
         write(" ")
         if pad2 == 4 then
                 term.setCursorPos(width-1,pad2-2)
-                write("%")
+                write("=")
         end
         if pad2 == 15 then
                 term.setCursorPos(width-1,pad2+2)
-                write("%")
+                write("=")
         end
 end
  
@@ -186,21 +186,21 @@ while true do
         event, par = os.pullEvent()
         if event == "timer" and par == timer1 then timerupdate() end
         if event == "char" then
-                if par == "w" then                 //when w is pressed
-                        pad1 = pad1 - 1            //pad1 moves up
-                        if pad1 < 4 then           //when pad1 is at a height of 4
-                                pad1 = 4           //pad1 stays at 4
+                if par == "w" then                 --when w is pressed
+                        pad1 = pad1 - 1            --pad1 moves up
+                        if pad1 < 4 then           --when pad1 is at a height of 4
+                                pad1 = 4           --pad1 stays at 4
                         end
-                elseif par == "s" then             //when s is pressed
-                        pad1 = pad1 + 1            //pad1 moves down
-                        if pad1 > height-3 then    //when pad1 is at a height of 3
-                                pad1 = height-3    //pad1 stays at 3
+                elseif par == "s" then             --when s is pressed
+                        pad1 = pad1 + 1            --pad1 moves down
+                        if pad1 > height-3 then    --when pad1 is at a height of 3
+                                pad1 = height-3    --pad1 stays at 3
                         end
                 end
-                if par == "o" then                 //when o is pressed
-                        pad2 = pad2 - 1            //pad2 moves up
-                        if pad2 < 4 then           //when pad2 is at a height of 4
-                                pad2 = 4           //pad2 stays at 4
+                if par == "o" then                 --when o is pressed
+                        pad2 = pad2 - 1            --pad2 moves up
+                        if pad2 < 4 then           --when pad2 is at a height of 4
+                                pad2 = 4           --pad2 stays at 4
                         end
                 elseif par == "l" then
                         pad2 = pad2 + 1
