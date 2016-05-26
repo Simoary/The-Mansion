@@ -136,3 +136,135 @@ for Height = 1, 2 do
 end
 
 Housept5:
+Housept4()
+for Z = 1, 2 do
+  for X = 1, 13 do
+    turtle.select( 6 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  for Y = 1, 8 do
+    turtle.select( 7 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+end
+turtle.up()
+for C = 1, 2 do
+  for A = 1, 13 do
+    turtle.select( 8 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  for B = 1, 8 do
+    turtle.select( 7 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+end
+turtle.up()
+
+Housept6:
+Housept5()
+turtle.forward()
+turtle.turnLeft()
+turtle.forward()
+turtle.turnRight()
+for Z = 1, 2 do
+  for X = 1, 11 do
+    turtle.select( 8 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  for Y = 1, 6 do
+    turtle.select( 8 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+end
+turtle.up()
+turtle.forward()
+turtle.turnLeft()
+turtle.forward()
+turtle.turnRight()
+for C = 1, 2 do
+  for A = 1, 9 do
+    turtle.select( 9 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  for B = 1, 4 do
+    turtle.select( 9 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+end
+
+Housept7:
+Housept6()
+turtle.up()
+turtle.forward()
+turtle.turnLeft()
+turtle.forward()
+turtle.turnRight()
+for Z = 1, 2 do
+  for X = 1, 7 do
+    turtle.select( 10 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+  for Y = 1, 2 do
+    turtle.select( 10 )
+    turtle.placeDown()
+    turtle.forward()
+  end
+  turtle.turnLeft()
+end
+turtle.up()
+turtle.turnLeft()
+turtle.forward()
+turtle.turnRight()
+turtle.forward()
+for A = 1, 6 do
+  turtle.select( 10 )
+  turtle.placeDown()
+  turtle.forward()
+end
+for n = 1, 4 do
+  turtle.forward()
+end
+for n = 1, 8 do
+  turtle.down()
+end
+
+Housept8:
+Housept7()
+turtle.turnLeft()
+for n = 1, 5 do
+  turtle.forward()
+end
+turtle.turnLeft()
+for n = 1, 7 do
+  turtle.forward()
+end
+turtle.turnLeft()
+turtle.dig()
+turtle.up()
+turtle.dig()
+turtle.down()
+turtle.turnRight()
+turtle.forward()
+turtle.turnLeft()
+turtle.dig()
+turtle.up()
+turtle.dig()
+turtle.down()
