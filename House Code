@@ -1,69 +1,69 @@
-House: local X, Y
-X = 14
-Y = 8
-for Z = 1, 2 do
-  for X = 1, X do
-    turtle.digDown()
-    turtle.forward()
+House: local X, Y       --declares both variables X and Y
+X = 14                  --X equals 14 which is the legth of the house
+Y = 8                   --Y equals 8 which is the width of the house
+for Z = 1, 2 do         --repeats twice
+  for X = 1, X do       --repeats 14 times
+    turtle.digDown()    --turtle digs down
+    turtle.forward()    --turtle moves forward
   end
-  turtle.turnLeft()
-  for Y = 1, Y do
-    turtle.digDown()
-    turtle.forward()
+  turtle.turnLeft()     --turtle turns left
+  for Y = 1, Y do       --repeats 8 times
+    turtle.digDown()    --digs down
+    turtle.forward()    --moves forward
   end
-  turtle.turnLeft()
+  turtle.turnLeft()     --turns left
 end
-for Z = 1, 2 do
-  for X = 1, X do
-    turtle.select( 1 )
-    turtle.placeDown()
-    turtle.forward()
+for Z = 1, 2 do         --repeats twice
+  for X = 1, X do       --repeats 14 times
+    turtle.select( 1 )  --turtle selects first slot
+    turtle.placeDown()  --places blo0ck down
+    turtle.forward()    --moves forward
   end
-  turtle.turnLeft()
-  for Y = 1, Y do
-    turtle.select( 1 )
-    turtle.placeDown()
-    turtle.forward()
+  turtle.turnLeft()     --turns left
+  for Y = 1, Y do       --repeats 8 times
+    turtle.select( 1 )  --selects first slot
+    turtle.placeDown()  --plces block down
+    turtle.forward()    --moves forward
   end
-  turtle.turnLeft()
+  turtle.turnLeft()     --turns left
 end
 
 Housept2:
-House()
-turtle.forward()
+House()               --runs first part of house program
+turtle.forward()      --turtle starts digging floor
 turtle.turnLeft()
 turtle.forward()
 turtle.turnRight()
-for Z = 1, 2 do
+for Z = 1, 2 do       --turtle digs and moves around in a square 11x6
   for X = 1, 11 do
     turtle.digDown()
     turtle.select( 2 )
-    turtle.placeDown()
+    turtle.placeDown()   --turtle digs blocks and then places block from slot 2 into the ground
     turtle.forward()
   end
-  turtle.turnLeft()
-  for Y = 1, 6 do
-    turtle.digDown()
+  turtle.turnLeft()         --turtle turns left
+  for Y = 1, 6 do           
+    turtle.digDown()      --places blocks along the width
     turtle.select( 2 )
     turtle.placeDown()
     turtle.forward()
   end
   turtle.turnLeft()
 end
-turtle.forward()
+turtle.forward()          --turtle continues digging into the centre and places blocks into the floor
 turtle.turnLeft()
 turtle.forward()
 turtle.turnRight()
-for C = 1, 2 do
-  for A = 1, 9 do
-    turtle.digDown()
+for C = 1, 2 do           --repeats twice
+  for A = 1, 9 do         --repeats 9 times
+    turtle.digDown()      --moves forward digs down and places blocks from slot 3
     turtle.select( 3 )
     turtle.placeDown()
     turtle.forward()
   end
   turtle.turnLeft()
-  for B = 1, 4 do
-    turtle.digDown()
+  for B = 1, 4 do       --repeats 4 times
+    turtle.digDown()    --moves forward digs down and places blocks from slot 3
     turtle.select( 3 )
     turtle.placeDown()
     turtle.forward()
@@ -72,39 +72,39 @@ for C = 1, 2 do
 end
 
 Housept3:
-Housept2()
-turtle.forward()
+Housept2()          --runs house part2
+turtle.forward()        
 turtle.turnLeft()
 turtle.forward()
 turtle.turnRight()
 for X = 1, 2 do
-  for A = 1, 7 do
+  for A = 1, 7 do     --turtle moves in closer to the middle of the floor
     turtle.digDown()
     turtle.select( 3 )
-    turtle.placeDown()
+    turtle.placeDown()  --turtle digs into the floor and places blocks
     turtle.forward()
   end
   turtle.turnLeft()
   for B = 1, 2 do
-    turtle.digDown()
+    turtle.digDown()    --turtle digs and places blocks into the floor
     turtle.select( 4 )
     turtle.placeDown()
     turtle.forward()
   end
   turtle.turnLeft()
 end
-turtle.forward()
+turtle.forward()        --turtle finishes the floor
 turtle.turnLeft()
 turtle.forward()
 turtle.turnRight()
-for Z = 1, 6 do
+for Z = 1, 6 do         --repeats 6 times
   turtle.digDown()
-  turtle.select( 4 )
+  turtle.select( 4 )    --digs down, places blocks and finishes the floor
   turtle.placeDown()
   turtle.forward()
 end
-for n = 1, 3 do
-  turtle.forward()
+for n = 1, 3 do         --turtle moves to the spot where it started
+turtle.forward()
 end
 turtle.turnLeft()
 for n = 1, 4 do
@@ -112,13 +112,13 @@ for n = 1, 4 do
 end
 
 Housept4:
-local I
-Housept3()
+local I     --declares I as a variable        
+Housept3()  --runs house part 3
 turtle.turnLeft()
 turtle.up()
-I = 5
-for Height = 1, 2 do
-  for Z = 1, 2 do
+I = 5             --sets variable "I" to 5
+for Height = 1, 2 do    --height equals 2
+  for Z = 1, 2 do       --turtle will place blocks into the contour of the house at a height of 2
     for X = 1, 13 do
       turtle.select( I )
       turtle.placeDown()
@@ -128,7 +128,7 @@ for Height = 1, 2 do
     for Y = 1, 8 do
       turtle.select( 6 )
       turtle.placeDown()
-      turtle.forward()
+      turtle.forward()--turtle places blocks until it reashes a height of 2
     end
     turtle.turnLeft()
   end
@@ -136,11 +136,11 @@ for Height = 1, 2 do
 end
 
 Housept5:
-Housept4()
+Housept4()                  --runs house part 4
 for Z = 1, 2 do
   for X = 1, 13 do
     turtle.select( 6 )
-    turtle.placeDown()
+    turtle.placeDown()        --turtle continues building until it achieves a height of 8
     turtle.forward()
   end
   turtle.turnLeft()
@@ -169,8 +169,8 @@ end
 turtle.up()
 
 Housept6:
-Housept5()
-turtle.forward()
+Housept5()   --runs house part 5
+turtle.forward()        --turtle starts building the roof
 turtle.turnLeft()
 turtle.forward()
 turtle.turnRight()
@@ -180,7 +180,7 @@ for Z = 1, 2 do
     turtle.placeDown()
     turtle.forward()
   end
-  turtle.turnLeft()
+  turtle.turnLeft()                 --turtle progrssively moves inward and a height of +1
   for Y = 1, 6 do
     turtle.select( 8 )
     turtle.placeDown()
@@ -192,7 +192,7 @@ turtle.up()
 turtle.forward()
 turtle.turnLeft()
 turtle.forward()
-turtle.turnRight()
+turtle.turnRight()      --starts the roof moves inward and goes around the house
 for C = 1, 2 do
   for A = 1, 9 do
     turtle.select( 9 )
@@ -209,10 +209,10 @@ for C = 1, 2 do
 end
 
 Housept7:
-Housept6()
+Housept6()          --runs house part 6
 turtle.up()
 turtle.forward()
-turtle.turnLeft()
+turtle.turnLeft()       --turtle continues roof 
 turtle.forward()
 turtle.turnRight()
 for Z = 1, 2 do
@@ -231,10 +231,10 @@ for Z = 1, 2 do
 end
 turtle.up()
 turtle.turnLeft()
-turtle.forward()
+turtle.forward()            
 turtle.turnRight()
 turtle.forward()
-for A = 1, 6 do
+for A = 1, 6 do                   --turtle finishes roof and moves toward the ground
   turtle.select( 10 )
   turtle.placeDown()
   turtle.forward()
@@ -249,7 +249,7 @@ end
 Housept8:
 Housept7()
 turtle.turnLeft()
-for n = 1, 5 do
+for n = 1, 5 do               --turtles moves to the front of the house and places doors
   turtle.forward()
 end
 turtle.turnLeft()
