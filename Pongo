@@ -114,31 +114,31 @@ function ball()
         if y == height-2 then up = true end
 end
  
---Intro
-term.clear()
-term.setCursorPos(1,1)
-print("")
-print("")
-print("")    
-print("                 Pongo, made by MAAN ")
-print("")
-print("")
-print("")
-print("")
-print("       Player 1 controls: W = up, S = down")
-print("")
-print("       Player 2 controls: O = up, L = down")
-print("")
-print("")
-print("")
-print("")
-print("")
-print("")
-write("Press <Enter> to continue.")
-io.read()
+--Intro                                                     
+term.clear()                                                 --clear screen
+term.setCursorPos(1,1)                                       --sets cursor to (1,1) (top left)
+print("")                                                    --prints blank space along the line
+print("")                                                    --prints blank space along the line
+print("")                                                    --prints blank space along the line    
+print("                 Pongo, made by MAAN ")               --prints Pongo, made by MAAN
+print("")                                                    --prints blank space along the line
+print("")                                                    --prints blank space along the line
+print("")                                                    --prints blank space along the line
+print("")                                                    --prints blank space along the line
+print("       Player 1 controls: W = up, S = down")          --prints "Player 1 controls: W = up, S = down"
+print("")                                                    --prints blank space along the line
+print("       Player 2 controls: O = up, L = down")          --prints "Player 2 controls: O = up, L = down"
+print("")                                                    --prints blank space along the line
+print("")                                                    --prints blank space along the line
+print("")                                                    --prints blank space along the line
+print("")                                                    --prints blank space along the line
+print("")                                                    --prints blank space along the line
+print("")                                                    --prints blank space along the line
+write("Press <Enter> to continue.")                          --prints "Press <Enter> to continue." 
+io.read()                                                    --replaces function with variable
  
-term.clear()
-term.setCursorPos(1,1)
+term.clear()                                                 --clears screen
+term.setCursorPos(1,1)                                       --sets cursor to (1,1) (top left)
  
 write("Player 1")
 term.setCursorPos(width-8,1)
@@ -177,13 +177,13 @@ end
 function timerupdate()
         ball()
        
-        term.setCursorPos(x,y)           // Sets cursor position to where the ball begins to move
-        write("@")                       // Icon of the ball "@"
-        timer1 = os.startTimer(.1)       // 
+        term.setCursorPos(x,y)                     --Sets cursor position to where the ball begins to move
+        write("@")                                 --Icon of the ball "@"
+        timer1 = os.startTimer(.1)                 --creates a timer that lasts for .1 seconds
 end
-timer1 = os.startTimer(.1)
+timer1 = os.startTimer(.1)                         --creates a timer that lasts for .1 seconds
 while true do
-        event, par = os.pullEvent()
+        event, par = os.pullEvent()                --
         if event == "timer" and par == timer1 then timerupdate() end
         if event == "char" then
                 if par == "w" then                 --when w is pressed
@@ -202,12 +202,12 @@ while true do
                         if pad2 < 4 then           --when pad2 is at a height of 4
                                 pad2 = 4           --pad2 stays at 4
                         end
-                elseif par == "l" then
-                        pad2 = pad2 + 1
-                        if pad2 > height-3 then
-                                pad2 = height-3
+                elseif par == "l" then             --when l is pressed
+                        pad2 = pad2 + 1            --pad2 moves down
+                        if pad2 > height-3 then    --if pad2 is at a height of -3 then
+                                pad2 = height-3    --pad2 stays at -3
                         end
                 end
-        end
-        drawPads()
-end
+        end                                                          
+        drawPads()                                 --runs te drawpads functions
+end                                                                                    
